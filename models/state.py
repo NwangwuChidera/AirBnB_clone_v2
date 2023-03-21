@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ State Module for HBNB project """
+<<<<<<< HEAD
 from models.base_model import BaseModel, Base
 from models import storage_type
 from models.city import City
@@ -30,3 +31,11 @@ class State(BaseModel, Base):
                 if city.state_id == self.id:
                     related_cities.append(city)
             return related_cities
+=======
+from models.base_model import BaseModel
+
+
+class State(BaseModel):
+    """ State class """
+    name = ""
+>>>>>>> cbaedfdd56b6e339a0af634cae7c81972e647043

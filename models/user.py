@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """This module defines a class User"""
+<<<<<<< HEAD
 from models.base_model import BaseModel, Base
 from models import storage_type
 from sqlalchemy import Column, String
@@ -23,3 +24,14 @@ class User(BaseModel, Base):
         password = ""
         first_name = ""
         last_name = ""
+=======
+from models.base_model import BaseModel
+
+
+class User(BaseModel):
+    """This class defines a user by various attributes"""
+    email = ''
+    password = ''
+    first_name = ''
+    last_name = ''
+>>>>>>> cbaedfdd56b6e339a0af634cae7c81972e647043
