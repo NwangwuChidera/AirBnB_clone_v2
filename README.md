@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-##0x02. AirBnB clone - MySQL
+
+#0x02. AirBnB clone - MySQL
 
 This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
 
 
-*Requirements*
-*Python Scripts*
+*Requirements
 Allowed editors: vi, vim, emacs
 All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
 All your files should end with a new line
@@ -48,8 +47,7 @@ The length of your files will be tested using wc
 
 Ezra Nobrega <ezra.nobrega@outlook.com>
 Justin Majetich <justinmajetich@gmail.com>
-Nwangwu Chidera pamela <nwangwupamela@gmail.co.>
-Olayink Samuel
+
 
 =======
 <center> <h1>HBNB - The Console</h1> </center>
