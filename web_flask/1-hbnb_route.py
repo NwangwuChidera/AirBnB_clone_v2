@@ -6,16 +6,17 @@ The web application listens on 0.0.0.0 and port 5000
 
 from flask import Flask
 
-app = Flask(__name__)
-IP = "0.0.0.0"
-Port = 5000
+app = Flask("__name__")
+
 
 @app.route("/", strict_slashes = False)
 def hello_hbnb():
-    return "<h1>Hello HBNB</h1>"
+    """return a string"""
+    return ("hello HBNB!")
 
 @app.route("/hbnb", strict_slashes = False)
 def hbnb():
-    return "<h1>HBNB</h1>"
+    """return a string"""
+    return ("HBNB")
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000, debug=None)

@@ -6,18 +6,16 @@ The web application listens on 0.0.0.0 and port 5000
 
 from flask import Flask
 
-app = Flask(__name__)
-IP = "0.0.0.0"
-Port = 5000
+app = Flask("__name__")
 
 
 @app.route("/", strict_slashes = False)
 def hello_hbnb():
-    return "<h1>Hello HBNB</h1>"
+    return ("hello HBNB!")
 
 @app.route("/hbnb", strict_slashes = False )
 def hbnb():
-    return "<h1>HBNB</h1>"
+    return ("HBNB")
 
 @app.route("/c/<text>", strict_slashes = False )
 def c_content(text="c is fun"):
@@ -25,7 +23,7 @@ def c_content(text="c is fun"):
     return "{}".format(replace("_", " ")
 
 if __name__ == "__main__":
-    app.run()
+    app.run("0.0.0.0", port=5000, debug=None)
 
 
 

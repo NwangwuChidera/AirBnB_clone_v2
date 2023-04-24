@@ -6,9 +6,8 @@ The web application listens on 0.0.0.0 and port 5000
 
 from flask import Flask
 
-app = Flask(__name__)
-IP = "0.0.0.0"
-Port = 5000
+app = Flask("__name_"_)
+
 
 @app.route("/", strict_slashes = False)
 def hello_hbnb():
@@ -21,12 +20,12 @@ def hbnb():
 @app.route("/c/<text>", strict_slashes = False)
 def c_content(text ="is_cool"):
     """replace _ with an empty space"""
-    return c {}.format(text.replace("_", ""))
+    return "C is {}".format(text.replace("_", " ") 
 
 @app.route("/python/<text>", strict_slashes = False)
 def python_contents(text="is cool"):
     """replace _ with an empty space"""
-    return "python {}".format(text.replace("_", ""))
+    return "python {}".format(text.replace("_", " "))
 
 @app.route("/number/<int:n>", strict_slashes = False)
 def number(n):
@@ -42,4 +41,4 @@ def number_template():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000, debug=None)

@@ -5,24 +5,21 @@ The web application listens on 0.0.0.0 and port 5000
 """
 from flask import Flask
 
-app = Flask(__name__)
-IP = "0.0.0.0"
-Port = 5000
-app.url_map.strict_slashes = False
+app = Flask("__name__")
 
 
 @app.route("/", strict_slashes=False)
 def hello_hbnb():
-    return "<h1>Hello HBNB</h1>"
+    return ("hello HBNB!")
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    return "<h1>HBNB</h1>"
+    return ("HBNB")
 
 @app.route("/c/<text>", strict_slashes=False)
 def c_content(text ="is_cool"):
     """replace _ with an empty space"""
-    return c {}.format(text.replace("_", ""))
+    return "C {}".format(text.replace("_", " "))
 
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
@@ -31,4 +28,4 @@ def pythonText(text="is cool"):
     return "Python {}".format(text.replace("_", " "))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000, debug=None)
